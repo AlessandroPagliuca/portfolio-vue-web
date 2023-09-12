@@ -1,7 +1,7 @@
 <template>
     <header class="container-fluid test-cont">
         <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-            <a class="navbar-brand" href="#">NavBar</a>
+            <a class="navbar-brand" href="#">alepagdev</a>
             <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,8 +43,11 @@ export default {
 </script>
   
 <style lang="scss" scoped>
-nav {
-    max-height: 220px;
+header {
+
+    nav {
+        max-height: 220px;
+    }
 }
 </style>
   
