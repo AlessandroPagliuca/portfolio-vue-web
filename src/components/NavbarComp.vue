@@ -11,10 +11,13 @@
                     aria-labelledby="offcanvasWithBackdropLabel">
                     <div class="offcanvas-header">
                         <h5>alepag<span>dev</span></h5>
-                        <button type="button" class="btn-close text-reset offcanvas-title" id="offcanvasWithBackdropLabel"
-                            @click="toggleNavbar" aria-label="Close"></button>
+                        <button type="button" class="btn text-reset offcanvas-title" id="offcanvasWithBackdropLabel"
+                            @click="toggleNavbar" aria-label="Close">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
                     </div>
                     <div class="offcanvas-body">
+                        <!-- generare con route-link i link delle pagine -->
                         <ul class="navbar-nav">
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Home</a>
@@ -128,6 +131,7 @@ header {
     transition: ease-in-out 0.3s;
 
     &:hover {
+        font-size: 42px;
         color: $green !important;
         transition: ease-in-out 0.5s;
     }
@@ -139,15 +143,35 @@ header {
     transition: ease-in-out 0.3s;
 
     h5 {
-        color: $grey !important;
+        color: $white !important;
+        font-size: 28px;
 
         span {
             color: $green !important;
         }
     }
 
+    button {
+        .fa-x {
+            color: $white !important;
+            transition: ease-in-out 0.3s;
+            font-size: 40px;
+
+        }
+
+        &:hover,
+        &:hover .fa-x {
+            font-size: 42px;
+            transition: ease-in-out 0.5s;
+            color: $green !important;
+        }
+    }
+
 }
 
+.offcanvas-header {
+    height: 100px;
+}
 
 /* Stile del backdrop */
 .offcanvas-backdrop {
