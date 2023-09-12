@@ -1,6 +1,6 @@
 <template>
     <NavbarComp />
-    <div class="container-wrap container-fluid test-cont d-flex justify-content-center align-items-center">
+    <div class="container-wrap container-fluid d-flex justify-content-center align-items-center">
         <div class="box d-flex flex-column justify-content-start">
             <div class="row gap-0">
                 <div class="col-12">
