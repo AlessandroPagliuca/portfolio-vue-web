@@ -1,29 +1,46 @@
 <template>
-    <header class="container-fluid test-cont">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-            <a class="navbar-brand" href="#">alepagdev</a>
-            <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div :class="['collapse', 'navbar-collapse', { 'show': isNavbarOpen }]" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Portofolio</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div>
+        <header class="container-fluid ">
+            <nav class=" navbar navbar-expand-lg">
+                <a class="navbar-brand d-flex justify-content-start align-items-center" href="#">
+                    <img src="../../public/photo-profile.jpeg" alt="#" style="width: 80px;">
+                    <h2 class="ps-2">alepag<span>dev</span></h2>
+                </a>
+                <!-- Offcanvas -->
+                <div :class="['offcanvas', 'offcanvas-end', { 'show': isNavbarOpen }]" id="offcanvasWithBackdrop"
+                    aria-labelledby="offcanvasWithBackdropLabel">
+                    <div class="offcanvas-header">
+                        <h5>alepag<span>dev</span></h5>
+                        <button type="button" class="btn-close text-reset offcanvas-title" id="offcanvasWithBackdropLabel"
+                            @click="toggleNavbar" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Portofolio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Button hamburger menu -->
+                <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="fa-solid fa-bars"></span>
+                </button>
+            </nav>
+        </header>
+        <!-- Aggiungi l'elemento per il backdrop -->
+        <div class="offcanvas-backdrop" :class="{ 'show': isNavbarOpen }" @click="toggleNavbar"></div>
+    </div>
 </template>
   
 <script>
@@ -43,11 +60,111 @@ export default {
 </script>
   
 <style lang="scss" scoped>
+@use '../assets/partials/variables' as *;
+
 header {
+    min-height: 100px;
 
     nav {
-        max-height: 220px;
+        a {
+            img {
+                width: 80px;
+                border-radius: 50%;
+                border: 3px solid $white;
+            }
+
+            h2 {
+                color: $white !important;
+                transition: ease-in-out 0.3s;
+            }
+
+            &:hover,
+            &:hover img,
+            &:hover h2,
+            &:hover span {
+                color: $grey !important;
+                transition: ease-in-out 0.5s;
+
+                span {
+                    color: $green !important;
+                    transition: ease-in-out 0.5s;
+                }
+
+                img {
+                    border-color: $green !important;
+                    transition: ease-in-out 0.5s;
+                }
+            }
+
+            button {
+                .navbar-toggler-icon {
+                    color: $blue !important;
+                }
+            }
+        }
+
+        ul {
+            li {
+                a {
+                    color: $white !important;
+
+                    &:hover {
+                        color: $green !important;
+                    }
+                }
+            }
+        }
     }
+}
+
+.collapse:not(.show) {
+    display: none;
+    max-width: fit-content !important;
+}
+
+.fa-bars {
+    font-size: 40px;
+    color: $white !important;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        color: $green !important;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+//Stile offcanvas
+.offcanvas {
+    background-color: $black !important;
+    transition: ease-in-out 0.3s;
+
+    h5 {
+        color: $grey !important;
+
+        span {
+            color: $green !important;
+        }
+    }
+
+}
+
+
+/* Stile del backdrop */
+.offcanvas-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Colore e opacità dello sfondo */
+    z-index: 1040;
+    /* L'indice Z deve essere superiore all'offcanvas */
+    display: none;
+}
+
+.offcanvas-backdrop.show {
+    display: block;
 }
 </style>
   
