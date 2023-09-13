@@ -10,16 +10,9 @@ h1 {
 container per gestire la disposizione 
 del contenuto di tutte le sezioni
 */
-.container-box-bottom {
-    width: 100%;
-    height: calc(100vh - 100px);
-    margin-top: 100px;
-}
-
 .container-box {
     width: 100%;
-    height: calc(100vh - 100px);
-    padding-top: 100px;
+    height: 100%;
 }
 
 /* classe per far capire all'utente

@@ -1,5 +1,5 @@
 <template>
-    <header class="d-flex align-items-center test-cont">
+    <header class="d-flex align-items-center">
         <nav class="container navbar navbar-expand-lg">
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="../../public/photo-profile.jpeg" alt="#" style="width: 80px;">
@@ -83,7 +83,7 @@ header {
     padding: 10px;
     position: fixed;
     z-index: 1000;
-    background-color: $black;
+    //background-color: $black;
 
     nav {
         a {
