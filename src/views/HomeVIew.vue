@@ -1,10 +1,24 @@
 <template>
     <NavbarComp class="test-cont" />
-    <div class="container-box-first">
-        1
+
+    <div id="home" class="container-box">
+        <!-- Contenuto della sezione Home -->home
     </div>
-    <div class="container-box">
-        2
+
+    <div id="about-me" class="container-box">
+        <!-- Contenuto della sezione About Me -->about
+    </div>
+
+    <div id="skills" class="container-box">
+        <!-- Contenuto della sezione Skills -->skills
+    </div>
+
+    <div id="portfolio" class="container-box">
+        <!-- Contenuto della sezione Portfolio -->portfolio
+    </div>
+
+    <div id="contact-me" class="container-box-bottom">
+        <!-- Contenuto della sezione Contact Me -->contact
     </div>
 </template>
 

@@ -19,8 +19,7 @@
                     <!-- generare con route-link i link delle pagine -->
                     <ul class="navbar-nav">
                         <li class="nav-item" v-for="link in menu" :key="link.routeName">
-                            <router-link :to="{ name: link.routeName }" class="nav-link mx-2" active-class="active"> {{
-                                link.label }} </router-link>
+                            <a :href="'#' + link.routeName" class="nav-link mx-2" active-class="active">{{ link.label }}</a>
                         </li>
                     </ul>
                 </div>
@@ -59,6 +58,10 @@ export default {
                 {
                     label: 'Portfolio',
                     routeName: 'portfolio'
+                },
+                {
+                    label: 'Contact me',
+                    routeName: 'contact-me'
                 },
             ],
         };

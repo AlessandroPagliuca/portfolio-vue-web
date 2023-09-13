@@ -10,17 +10,16 @@ h1 {
 container per gestire la disposizione 
 del contenuto di tutte le sezioni
 */
-.container-box-first {
+.container-box-bottom {
     width: 100%;
     height: calc(100vh - 100px);
     margin-top: 100px;
-    background-color: $green;
 }
 
 .container-box {
     width: 100%;
     height: calc(100vh - 100px);
-    background-color: $grey;
+    padding-top: 100px;
 }
 
 /* classe per far capire all'utente
