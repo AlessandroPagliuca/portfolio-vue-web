@@ -1,41 +1,40 @@
 <template>
-    <div>
-        <header class="container">
-            <nav class="d-flex align-items-center navbar navbar-expand-lg">
-                <a class="navbar-brand d-flex align-items-center" href="/">
-                    <img src="../../public/photo-profile.jpeg" alt="#" style="width: 80px;">
-                    <h2 class="ps-2">alepag<span>dev</span></h2>
-                </a>
-                <!-- Offcanvas -->
-                <div :class="['offcanvas', 'offcanvas-end', { 'show': isNavbarOpen }]" id="offcanvasWithBackdrop"
-                    aria-labelledby="offcanvasWithBackdropLabel">
-                    <div class="offcanvas-header">
-                        <h5>alepag<span>dev</span></h5>
-                        <button type="button" class="btn text-reset offcanvas-title" id="offcanvasWithBackdropLabel"
-                            @click="toggleNavbar" aria-label="Close">
-                            <i class="fa-solid fa-x"></i>
-                        </button>
-                    </div>
-                    <div class="offcanvas-body justify-content-end">
-                        <!-- generare con route-link i link delle pagine -->
-                        <ul class="navbar-nav">
-                            <li class="nav-item" v-for="link in menu" :key="link.routeName">
-                                <router-link :to="{ name: link.routeName }" class="nav-link mx-2" active-class="active"> {{
-                                    link.label }} </router-link>
-                            </li>
-                        </ul>
-                    </div>
+    <header class="d-flex align-items-center test-cont">
+        <nav class="container navbar navbar-expand-lg">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="../../public/photo-profile.jpeg" alt="#" style="width: 80px;">
+                <h2 class="ps-2">alepag<span>dev</span></h2>
+            </a>
+            <!-- Offcanvas -->
+            <div :class="['offcanvas', 'offcanvas-end', { 'show': isNavbarOpen }]" id="offcanvasWithBackdrop"
+                aria-labelledby="offcanvasWithBackdropLabel">
+                <div class="offcanvas-header">
+                    <h5>alepag<span>dev</span></h5>
+                    <button type="button" class="btn text-reset offcanvas-title" id="offcanvasWithBackdropLabel"
+                        @click="toggleNavbar" aria-label="Close">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
                 </div>
-                <!-- Button hamburger menu -->
-                <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="fa-solid fa-bars"></span>
-                </button>
-            </nav>
-        </header>
-        <!-- Aggiungi l'elemento per il backdrop -->
-        <div class="offcanvas-backdrop" :class="{ 'show': isNavbarOpen }" @click="toggleNavbar"></div>
-    </div>
+                <div class="offcanvas-body justify-content-end">
+                    <!-- generare con route-link i link delle pagine -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item" v-for="link in menu" :key="link.routeName">
+                            <router-link :to="{ name: link.routeName }" class="nav-link mx-2" active-class="active"> {{
+                                link.label }} </router-link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Button hamburger menu -->
+            <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa-solid fa-bars"></span>
+            </button>
+            <!-- Aggiungi l'elemento per il backdrop -->
+            <div class="offcanvas-backdrop" :class="{ 'show': isNavbarOpen }" @click="toggleNavbar"></div>
+
+        </nav>
+    </header>
 </template>
   
 <script>
@@ -76,7 +75,12 @@ export default {
 @use '../assets/partials/variables' as *;
 
 header {
-    min-height: 100px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    position: fixed;
+    z-index: 1000;
+    background-color: $black;
 
     nav {
         a {
@@ -106,12 +110,6 @@ header {
                 img {
                     border-color: $green !important;
                     transition: ease-in-out 0.5s;
-                }
-            }
-
-            button {
-                .navbar-toggler-icon {
-                    color: $blue !important;
                 }
             }
         }

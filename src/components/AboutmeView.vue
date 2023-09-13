@@ -10,7 +10,6 @@
                         <!--Description-->
                         <div class="col-12">
                             <p class="display-6">About me</p>
-                            <!-- <h1>I'm Alessandro a <span>Jr. Full Stack Web Developer</span></h1> -->
                         </div>
                         <!--Links social-->
                         <div class="col-12">

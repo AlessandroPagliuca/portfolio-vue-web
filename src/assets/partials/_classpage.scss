@@ -1,0 +1,38 @@
+@use './variables' as *;
+
+h1 {
+    span {
+        color: $green;
+    }
+}
+
+/*
+container per gestire la disposizione 
+del contenuto di tutte le sezioni
+*/
+.container-box-first {
+    width: 100%;
+    height: calc(100vh - 100px);
+    margin-top: 100px;
+    background-color: $green;
+}
+
+.container-box {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: $grey;
+}
+
+/* classe per far capire all'utente
+se un link può essere cliccato
+*/
+a {
+    font-size: 25px;
+    color: $white !important;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        color: $green !important;
+        transition: ease-in-out 0.5s;
+    }
+}
