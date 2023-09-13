@@ -1,8 +1,8 @@
 <template>
     <div>
-        <header class="container-fluid ">
-            <nav class=" navbar navbar-expand-lg">
-                <a class="navbar-brand d-flex justify-content-start align-items-center" href="#">
+        <header class="container">
+            <nav class="d-flex align-items-center navbar navbar-expand-lg">
+                <a class="navbar-brand d-flex align-items-center" href="/">
                     <img src="../../public/photo-profile.jpeg" alt="#" style="width: 80px;">
                     <h2 class="ps-2">alepag<span>dev</span></h2>
                 </a>
@@ -16,20 +16,12 @@
                             <i class="fa-solid fa-x"></i>
                         </button>
                     </div>
-                    <div class="offcanvas-body">
+                    <div class="offcanvas-body justify-content-end">
                         <!-- generare con route-link i link delle pagine -->
                         <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About me</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Skills</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Portofolio</a>
+                            <li class="nav-item" v-for="link in menu" :key="link.routeName">
+                                <router-link :to="{ name: link.routeName }" class="nav-link mx-2" active-class="active"> {{
+                                    link.label }} </router-link>
                             </li>
                         </ul>
                     </div>
@@ -52,6 +44,24 @@ export default {
     data() {
         return {
             isNavbarOpen: false, // Variabile di stato per il menu a tendina
+            menu: [
+                {
+                    label: 'Home',
+                    routeName: 'home'
+                },
+                {
+                    label: 'About me',
+                    routeName: 'about-me'
+                },
+                {
+                    label: 'Skills',
+                    routeName: 'skills'
+                },
+                {
+                    label: 'Portfolio',
+                    routeName: 'portfolio'
+                },
+            ],
         };
     },
     methods: {
@@ -123,6 +133,14 @@ header {
 .collapse:not(.show) {
     display: none;
     max-width: fit-content !important;
+}
+
+//classe active per gestire la visualizzazione del link attivo della pagina corrente
+.active {
+    //border-bottom: $green 3px inset;
+    color: $green !important;
+
+
 }
 
 .fa-bars {

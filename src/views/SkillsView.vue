@@ -9,12 +9,12 @@
                     <div class="row gap-0">
                         <!--Description-->
                         <div class="col-12">
-                            <p class="display-6">Welcome to my world</p>
+                            <p class="display-6">Skills ggggggggg ggggggg ggggggg</p>
                             <h1>I'm Alessandro a <span>Jr. Full Stack Web Developer</span></h1>
                         </div>
                         <!--Links social-->
                         <div class="col-12">
-                            <div class="d-flex justify-content-start">
+                            <!-- <div class="d-flex justify-content-start">
                                 <span class="pe-3 py-3">
                                     <a href="#">
                                         <i class="fa-brands fa-github"></i>
@@ -28,7 +28,7 @@
                                     </a>
                                 </span>
 
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -47,7 +47,7 @@
 <script>
 import NavbarComp from '../components/NavbarComp.vue';
 export default {
-    name: 'HomeView',
+    name: 'SkillsView',
     components: {
         NavbarComp,
     }
