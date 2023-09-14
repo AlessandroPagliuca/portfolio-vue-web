@@ -7,6 +7,26 @@ const router = createRouter({
             name: 'home',
             component: () => import('../views/SectionView.vue'),
         },
+        // {
+        //     path: '/#about-me',
+        //     name: 'about-me',
+        //     component: () => import('../components/AboutmeComp.vue'),
+        // },
+        // {
+        //     path: '/#skills',
+        //     name: 'skills',
+        //     component: () => import('../components/SkillsComp.vue'),
+        // },
+        // {
+        //     path: '/#portfolio',
+        //     name: 'portfolio',
+        //     component: () => import('../components/PortfolioComp.vue'),
+        // },
+        // {
+        //     path: '/#contact-me',
+        //     name: 'contact-me',
+        //     component: () => import('../components/ContactComp.vue'),
+        // },
     ]
 })
 export default router
