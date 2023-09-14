@@ -19,7 +19,8 @@
                     <!-- generare con route-link i link delle pagine -->
                     <ul class="navbar-nav">
                         <li class="nav-item" v-for="link in menu" :key="link.routeName">
-                            <a :href="'#' + link.routeName" class="nav-link mx-2" active-class="active">{{ link.label }}</a>
+                            <a :href="'#' + link.routeName" class="nav-link mx-2" active-class="active">{{
+                                link.label }}</a>
                         </li>
                     </ul>
                 </div>
