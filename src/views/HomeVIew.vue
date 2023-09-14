@@ -1,34 +1,36 @@
 <template>
-    <NavbarComp class="test-cont" />
-    <main class="test-cont">
-        <div id="home" class="container-box">
+    <NavbarComp />
+    <main class="container-fluid smooth-scroll">
+        <div id="home" class="container-box container test-cont">
             <!-- Contenuto della sezione Home -->home
         </div>
 
-        <div id="about-me" class="container-box">
-            <!-- Contenuto della sezione About Me -->about
-        </div>
+        <AboutmeComp />
 
-        <div id="skills" class="container-box">
-            <!-- Contenuto della sezione Skills -->skills
-        </div>
+        <SkillsComp />
 
-        <div id="portfolio" class="container-box">
-            <!-- Contenuto della sezione Portfolio -->portfolio
-        </div>
+        <PortfolioComp />
 
-        <div id="contact-me" class="container-box">
-            <!-- Contenuto della sezione Contact Me -->contact
-        </div>
+        <ContactComp />
+
     </main>
 </template>
 
 <script>
 import NavbarComp from '../components/NavbarComp.vue';
+import SkillsComp from '../components/SkillsComp.vue';
+import AboutmeComp from '../components/AboutmeComp.vue';
+import PortfolioComp from '../components/PortfolioComp.vue';
+import ContactComp from '../components/ContactComp.vue';
+
 export default {
     name: 'HomeView',
     components: {
         NavbarComp,
+        SkillsComp,
+        AboutmeComp,
+        PortfolioComp,
+        ContactComp,
     }
 }
 </script>

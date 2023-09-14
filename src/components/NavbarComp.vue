@@ -1,7 +1,7 @@
 <template>
     <header class="d-flex align-items-center">
         <nav class="container navbar navbar-expand-lg">
-            <a class="navbar-brand d-flex align-items-center" href="/">
+            <a class="navbar-brand d-flex align-items-center" href="/#home">
                 <img src="../../public/photo-profile.jpeg" alt="#" style="width: 80px;">
                 <h2 class="ps-2">alepag<span>dev</span></h2>
             </a>
