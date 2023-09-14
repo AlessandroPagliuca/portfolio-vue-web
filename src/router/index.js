@@ -4,8 +4,8 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            name: 'home',
-            component: () => import('../views/SectionView.vue'),
+            name: 'layout',
+            component: () => import('../views/LayoutView.vue'),
         },
         // {
         //     path: '/#about-me',
