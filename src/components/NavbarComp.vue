@@ -2,7 +2,7 @@
     <header class="d-flex align-items-center">
         <nav class="container navbar navbar-expand-lg">
             <a class="navbar-brand d-flex align-items-center" href="/#home">
-                <img src="../../public/photo-profile.jpeg" alt="#" style="width: 80px;">
+                <img src="../../public/photo-profile.jpeg" alt="#">
                 <h2 class="ps-2">alepag<span>dev</span></h2>
             </a>
             <!-- Offcanvas -->
@@ -89,7 +89,7 @@ header {
     nav {
         a {
             img {
-                width: 80px;
+                width: 50px;
                 border-radius: 50%;
                 border: 3px solid $white;
             }
