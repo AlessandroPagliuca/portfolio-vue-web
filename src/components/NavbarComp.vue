@@ -1,10 +1,10 @@
 <template>
     <header class="d-flex align-items-center">
         <nav class="container navbar navbar-expand-lg">
-            <a class="navbar-brand d-flex align-items-center" href="/#home">
+            <div class="navbar-brand d-flex align-items-center">
                 <img src="../../public/photo-profile.jpeg" alt="#">
                 <h2 class="ps-2">alepag<span>dev</span></h2>
-            </a>
+            </div>
             <!-- Offcanvas -->
             <div :class="['offcanvas', 'offcanvas-end', { 'show': isNavbarOpen }]" id="offcanvasWithBackdrop"
                 aria-labelledby="offcanvasWithBackdropLabel">
@@ -109,36 +109,22 @@ header {
     //background-color: $black;
 
     nav {
-        a {
+        div {
             img {
                 width: 50px;
                 border-radius: 50%;
-                border: 3px solid $white;
+                border: 3px solid $green;
             }
 
             h2 {
                 color: $white !important;
-                transition: ease-in-out 0.3s;
             }
 
-            &:hover,
-            &:hover img,
-            &:hover h2,
-            &:hover span {
-                color: $grey !important;
-                transition: ease-in-out 0.5s;
-
-                span {
-                    color: $green !important;
-                    transition: ease-in-out 0.5s;
-                }
-
-                img {
-                    border-color: $green !important;
-                    transition: ease-in-out 0.5s;
-                }
+            span {
+                color: $green !important;
             }
         }
+
 
         ul {
             li {
