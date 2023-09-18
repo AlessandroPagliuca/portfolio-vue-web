@@ -19,8 +19,10 @@
                     <!-- generare con route-link i link delle pagine -->
                     <ul class="navbar-nav">
                         <li class="nav-item" v-for="link in menu" :key="link.routeName">
-                            <a :href="'#' + link.routeName" class="nav-link mx-2" active-class="active">{{
-                                link.label }}</a>
+                            <a :href="'#' + link.routeName" class="nav-link mx-2" :class="{ 'active': link.isActive }"
+                                @click="handleLinkClick(link)">
+                                {{ link.label }}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -46,23 +48,31 @@ export default {
             menu: [
                 {
                     label: 'Home',
-                    routeName: 'home'
+                    routeName: 'home',
+                    isActive: true,
                 },
                 {
                     label: 'About me',
-                    routeName: 'about-me'
+                    routeName: 'about-me',
+                    isActive: false,
+
                 },
                 {
                     label: 'Skills',
-                    routeName: 'skills'
+                    routeName: 'skills',
+                    isActive: false,
+
                 },
                 {
                     label: 'Portfolio',
-                    routeName: 'portfolio'
+                    routeName: 'portfolio',
+                    isActive: false,
+
                 },
                 {
                     label: 'Contact me',
-                    routeName: 'contact-me'
+                    routeName: 'contact-me',
+                    isActive: false,
                 },
             ],
         };
@@ -70,6 +80,18 @@ export default {
     methods: {
         toggleNavbar() {
             this.isNavbarOpen = !this.isNavbarOpen; // Inverte lo stato del menu a tendina
+        },
+        handleLinkClick(clickedLink) {
+            // Rimuovi la classe "active" da tutti i link nel menu
+            this.menu.forEach(link => {
+                link.isActive = false;
+            });
+
+            // Aggiungi la classe "active" al link cliccato
+            clickedLink.isActive = true;
+
+            // Chiudi l'offcanvas
+            this.isNavbarOpen = false;
         },
     },
 };
