@@ -58,14 +58,14 @@ export default {
 
                 },
                 {
-                    label: 'Skills',
-                    routeName: 'skills',
+                    label: 'Portfolio',
+                    routeName: 'portfolio',
                     isActive: false,
 
                 },
                 {
-                    label: 'Portfolio',
-                    routeName: 'portfolio',
+                    label: 'Skills',
+                    routeName: 'skills',
                     isActive: false,
 
                 },

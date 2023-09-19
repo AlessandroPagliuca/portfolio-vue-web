@@ -5,7 +5,7 @@
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                 left
             </div>
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-end">
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start">
                 <h3 class="display-5 pb-4">About me</h3>
                 <p class="">
                     Sono un appassionato della programmazione e

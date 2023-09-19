@@ -3,7 +3,7 @@
         <!-- Contenuto della sezione Home -->
         <div class="row h-100">
             <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start">
-                <p class="display-6 pb-4">Welcome to my web site</p>
+                <p class="display-6 pb-4">Welcome to my website</p>
                 <h1 class="display-5 fw-bold">
                     I'm Alessandro a <span>Junior Full Stack web developer</span>
                     from Italy

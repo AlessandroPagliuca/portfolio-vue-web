@@ -5,16 +5,12 @@
     <main class="container-fluid smooth-scroll">
         <!--Componente delle sezione Home-->
         <HomeComp />
-
         <!--Componente delle sezione About me-->
         <AboutmeComp />
-
-        <!--Componente delle sezione Skills-->
-        <SkillsComp />
-
         <!--Componente delle sezione Portfolio-->
         <PortfolioComp />
-
+        <!--Componente delle sezione Skills-->
+        <SkillsComp />
         <!--Componente delle sezione Contact me-->
         <ContactComp />
 
