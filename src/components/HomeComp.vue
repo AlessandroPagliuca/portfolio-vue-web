@@ -8,6 +8,7 @@
                     I'm Alessandro a <span>Junior Full Stack web developer</span>
                     from Italy
                 </h1>
+                <!--link social and download cv-->
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                 right
